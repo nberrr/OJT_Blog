@@ -31,11 +31,11 @@ export function FeaturedPost() {
             className="object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-          <Badge className="absolute left-4 top-4 bg-primary text-primary-foreground">Week 3</Badge>
+          <Badge className="absolute left-4 top-4 bg-primary text-primary-foreground">Week 1</Badge>
         </div>
         <CardHeader>
-          <CardTitle className="text-2xl">The First Real Challenge</CardTitle>
-          <CardDescription>April 29, 2023</CardDescription>
+          <CardTitle className="text-2xl">Stepping into Workplace</CardTitle>
+          <CardDescription>February 24-28 ,2025</CardDescription>
         </CardHeader>
         <CardContent>
           <p>

@@ -21,6 +21,10 @@ interface WeeklyBlogCardProps {
 export function WeeklyBlogCard({ title, description, date, slug, week, imageUrl }: WeeklyBlogCardProps) {
   const [isHovered, setIsHovered] = useState(false)
 
+  // Convert the slug format from "week-1" to "week1" for the image path
+  const imageSlug = slug.replace('-', '')
+  const coverImageUrl = `/blog/${imageSlug}/cover.jpg`
+
   return (
     <motion.div
       whileHover={{ y: -5 }}
@@ -35,7 +39,18 @@ export function WeeklyBlogCard({ title, description, date, slug, week, imageUrl 
             transition={{ duration: 0.4 }}
             className="h-full w-full"
           >
-            <Image src={imageUrl || "/placeholder.svg"} alt={title} fill className="object-cover" />
+            <Image 
+              src={coverImageUrl}
+              alt={title} 
+              fill 
+              className="object-cover"
+              priority
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              onError={(e) => {
+                const target = e.target as HTMLImageElement
+                target.src = `/placeholder.svg?height=360&width=640&text=${encodeURIComponent(title)}`
+              }}
+            />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
           </motion.div>
           <Badge className="absolute left-4 top-4 bg-primary text-primary-foreground">{week}</Badge>

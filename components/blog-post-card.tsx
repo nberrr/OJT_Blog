@@ -33,10 +33,16 @@ export function BlogPostCard({ title, description, date, slug }: BlogPostCardPro
             className="h-full w-full"
           >
             <Image
-              src={`/placeholder.svg?height=360&width=640&text=${encodeURIComponent(title)}`}
+              src={`/blog/${slug}/cover.jpg`}
               alt={title}
               fill
               className="object-cover"
+              priority
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              onError={(e) => {
+                const target = e.target as HTMLImageElement
+                target.src = `/placeholder.svg?height=360&width=640&text=${encodeURIComponent(title)}`
+              }}
             />
           </motion.div>
         </div>

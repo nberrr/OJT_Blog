@@ -5,137 +5,74 @@ import { ChevronLeft } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { NewsletterModal } from "@/components/newsletter-modal"
 import { Badge } from "@/components/ui/badge"
+import { BlogCoverImage } from "@/components/blog-cover-image"
 
 // This would typically come from a CMS or database
 const blogPosts = {
   "week-1": {
-    title: "First Steps into the Unknown",
-    date: "April 15, 2023",
+    title: "Stepping into Workplace",
+    date: "February 24-28, 2025",
     author: "John Nebrej N. Rempis",
     week: "Week 1",
+    src: "/blog/week1/cover.jpeg",
     images: [
-      "/placeholder.svg?height=600&width=800&text=Week+1:+Office+Tour",
-      "/placeholder.svg?height=600&width=800&text=Week+1:+First+Day",
-      "/placeholder.svg?height=600&width=800&text=Week+1:+Team+Meeting",
+      "/blog/week1/gallery/pic1.jpg",
+      "/blog/week1/gallery/pic2.jpeg",
+      "/blog/week1/gallery/pic3.jpg",
+      "/blog/week1/gallery/pic4.jpeg",
+      "/blog/week1/gallery/pic5.jpeg",
+      "/blog/week1/gallery/pic6.jpeg",
+      "/blog/week1/gallery/pic7.jpeg",
+      "/blog/week1/gallery/pic8.jpg",
+      "/blog/week1/gallery/pic9.jpg",
     ],
     content: `
       <p>My first week at the company was a whirlwind of new experiences. I arrived early on Monday, nervous but excited about what lay ahead. The office was larger than I expected, with an open floor plan that seemed designed to encourage collaboration.</p>
       
-      <h2>Day 1: Orientation</h2>
+      <h2>Delayed Start but Productive Beginning</h2>
       
-      <p>The HR manager, Ms. Santos, gave me a warm welcome and walked me through the orientation process. I received my company ID, access cards, and a welcome package that included a company handbook and some branded merchandise. The morning was spent filling out paperwork and setting up my accounts.</p>
+      <p> Our deployment was delayed due to paperwork issues, making us three weeks late from the original schedule. However, as we officially began Week 1, we made sure to maximize our time and productivity.</p>
       
-      <p>After lunch, I met my supervisor, Mr. Reyes, who gave me a tour of the office and introduced me to the team. Everyone was friendly, though I struggled to remember all the names. Mr. Reyes explained that I would be rotating through different departments during my OJT to get a comprehensive understanding of the company's operations.</p>
+      <p> This week, we focused on setting up our workspace—installing PCs, crimping and setting up LAN cables, and organizing our workstations. We actively participated in meetings and were assigned our tasks. The major task, called the "Rock Task," revolves around a system we’ll be working on, while our minor tasks involve other responsibilities. I was assigned to collateral report layout, which aligns with my other skills.
+
+</p>
       
-      <h2>Day 2-3: Shadowing</h2>
-      
-      <p>I spent the next two days shadowing different team members. This was invaluable as it gave me insight into the day-to-day operations and the various roles within the company. I observed meetings, took notes, and asked questions whenever appropriate.</p>
-      
-      <p>The most challenging aspect was understanding the company's internal systems and software. They use several proprietary tools that I had never encountered before. Thankfully, everyone was patient and willing to explain things multiple times if needed.</p>
-      
-      <h2>Day 4: First Assignment</h2>
-      
-      <p>On Thursday, Mr. Reyes gave me my first real assignment: to compile data from various departments for the monthly report. It was a simple task, but it required me to interact with different team members and navigate the company's database. I made a few mistakes but managed to complete it by the end of the day.</p>
-      
-      <h2>Day 5: Reflection</h2>
-      
-      <p>Friday was more relaxed. The team has a tradition of having lunch together on Fridays, which was a great opportunity to get to know everyone better in a casual setting. In the afternoon, I had a brief check-in with Mr. Reyes to discuss my first week and set expectations for the coming weeks.</p>
-      
-      <h2>Key Learnings:</h2>
-      
-      <ul>
-        <li>The importance of asking questions when unsure</li>
-        <li>The value of taking detailed notes</li>
-        <li>The significance of company culture in shaping the work environment</li>
-        <li>The need to be adaptable and open to learning new systems</li>
-      </ul>
-      
-      <h2>Challenges:</h2>
-      
-      <ul>
-        <li>Information overload – there was so much to learn in such a short time</li>
-        <li>Navigating the company's internal systems</li>
-        <li>Remembering everyone's names and roles</li>
-        <li>Managing anxiety about making mistakes</li>
-      </ul>
-      
-      <h2>Goals for Next Week:</h2>
-      
-      <ul>
-        <li>Become more familiar with the company's software</li>
-        <li>Take on more responsibilities</li>
-        <li>Build stronger relationships with team members</li>
-        <li>Improve my time management skills</li>
-      </ul>
-      
-      <p>Overall, my first week was both challenging and exciting. I'm grateful for the warm welcome and looking forward to what the coming weeks will bring.</p>
+
+      <p>Determined to make the most of our first week, I worked on wireframing, layout design, and even tried creating a mock-up logo for the system. Despite the late start, we ensured a productive week, setting a strong foundation for the coming days.
+</p>
     `,
   },
   "week-2": {
-    title: "Finding My Rhythm",
-    date: "April 22, 2023",
+    title: "Finding The Rhythm",
+    date: "March 3-7, 2025",
     author: "John Nebrej N. Rempis",
     week: "Week 2",
+    src: "/blog/week2/cover.jpg", // This should be cover.jpg to match your file structure
     images: [
-      "/placeholder.svg?height=600&width=800&text=Week+2:+Workspace",
-      "/placeholder.svg?height=600&width=800&text=Week+2:+Project+Planning",
-      "/placeholder.svg?height=600&width=800&text=Week+2:+Team+Lunch",
+      "/blog/week2/gallery/pic1.jpg", // Missing leading slash
+      "/blog/week2/gallery/pic2.jpg",
+      "/blog/week2/gallery/pic3.jpg",
+      "/blog/week2/gallery/pic4.jpg",
+      "/blog/week2/gallery/pic5.jpg",
+      "/blog/week2/gallery/pic6.jpg",   
     ],
     content: `
       <p>Week two was all about finding my rhythm and establishing routines. The initial overwhelm began to subside as I became more familiar with the office environment and daily procedures.</p>
       
-      <h2>Monday: Building on Foundations</h2>
+      <h2>Diving into Tasks</h2>
       
-      <p>I started the week with a clearer understanding of my role and responsibilities. Mr. Reyes assigned me to the marketing department for this week, where I would be assisting with their ongoing campaigns. Ms. Lim, the marketing manager, briefed me on their current projects and what they expected from me.</p>
+      <p>This week marked the real start of our hands-on work in the Management Information System
+ (MIS) Department. With guidance from the employees, we got deeper into our assigned tasks and adapted to the workflow.</p>
+ <p>One of my key focuses was wireframing, ensuring that the structure of our project was well-planned and visually organized. We attended meetings to align our progress, submitted our weekly report, and underwent a realignment of tasks to ensure everyone was on track.</p>
+ <p>To start by Week 3, I was also assigned the task of revising brochures, improving their layout and content to make them more engaging and professional. This involved careful attention to design and formatting while making sure the message remained clear and effective.</p>
+ <p>
+      <p>Our weekly meetings were a crucial part of our routine. We discussed our progress, addressed any issues, and planned our next steps. The meetings were structured to ensure everyone was on the same page and to facilitate collaboration.</p>
+Throughout the week, we continued learning from our mentors, gaining insights into best practices and problem-solving approaches in MIS. It was a productive and insightful week, setting a strong foundation for the tasks ahead!
+</p>
       
-      <p>My main task was to help analyze data from their recent social media campaign. This involved extracting data from various platforms, organizing it in spreadsheets, and identifying trends. Though I had some experience with data analysis from school, applying it in a real-world context was different and more complex.</p>
       
-      <h2>Tuesday-Wednesday: Diving into Marketing</h2>
+     
       
-      <p>These days were spent immersed in marketing analytics. I learned how to use the company's analytics tools and began to understand how they measure campaign success. The marketing team was particularly interested in engagement rates and conversion metrics.</p>
-      
-      <p>On Wednesday afternoon, I attended my first marketing strategy meeting. It was fascinating to see how decisions were made based on data and market trends. I mostly observed, but Ms. Lim encouraged me to share my thoughts on appealing to younger demographics, which was well-received.</p>
-      
-      <h2>Thursday: Creative Input</h2>
-      
-      <p>Thursday brought a shift from analytics to creative work. The team was brainstorming ideas for an upcoming campaign, and I was invited to participate. Initially hesitant, I eventually shared some ideas that were influenced by current trends I'd observed on social media.</p>
-      
-      <p>To my surprise, one of my suggestions—a user-generated content contest—was added to the list of potential strategies. This was a confidence boost and made me feel like a valuable team member rather than just an intern.</p>
-      
-      <h2>Friday: Reflection and Planning</h2>
-      
-      <p>Friday morning was spent finalizing the week's analytics report. In the afternoon, I had my weekly check-in with Mr. Reyes. He seemed pleased with the feedback from the marketing team and mentioned that my next week would be split between marketing and the design department.</p>
-      
-      <p>The team lunch was more enjoyable this week as I felt more comfortable with my colleagues. I'm starting to build genuine connections, especially with the younger staff members who have been particularly welcoming.</p>
-      
-      <h2>Key Learnings:</h2>
-      
-      <ul>
-        <li>The practical application of marketing analytics</li>
-        <li>How data drives decision-making in business</li>
-        <li>The importance of creative thinking in marketing</li>
-        <li>The value of speaking up and sharing ideas, even as an intern</li>
-      </ul>
-      
-      <h2>Challenges:</h2>
-      
-      <ul>
-        <li>Learning new analytics tools with limited training</li>
-        <li>Overcoming the fear of sharing ideas in meetings</li>
-        <li>Balancing thoroughness with efficiency in data analysis</li>
-        <li>Adapting to different working styles within the team</li>
-      </ul>
-      
-      <h2>Goals for Next Week:</h2>
-      
-      <ul>
-        <li>Contribute more actively in meetings</li>
-        <li>Learn basic design principles from the design department</li>
-        <li>Improve my efficiency with the analytics tools</li>
-        <li>Start a small personal project that could benefit the company</li>
-      </ul>
-      
-      <p>Week two has shown me that finding my place in a professional environment is a gradual process. I'm becoming more comfortable with the daily routines and beginning to see how my education translates to practical work. Most importantly, I'm learning that my perspective, even as an intern, can be valuable to the team.</p>
     `,
   },
   "week-3": {
@@ -335,12 +272,11 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
             </div>
           </div>
           <div className="relative my-8 aspect-video overflow-hidden rounded-lg">
-            <Image
-              src={`/placeholder.svg?height=720&width=1280&text=${encodeURIComponent(post.week + ": " + post.title)}`}
+            <BlogCoverImage
+              src={post.src}
               alt={post.title}
-              fill
-              className="object-cover"
-              priority
+              week={post.week}
+              title={post.title}
             />
           </div>
           <div

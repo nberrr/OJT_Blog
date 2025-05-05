@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata = {
   title: "The Art of Productive Laziness | John Nebrej N. Rempis",
   description: "Weekly OJT journal by John Nebrej N. Rempis documenting learning experiences and professional growth.",
-    generator: 'v0.dev'
+  
 }
 
 export default function RootLayout({
