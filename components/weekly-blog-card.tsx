@@ -23,7 +23,11 @@ export function WeeklyBlogCard({ title, description, date, slug, week, imageUrl 
 
   // Convert the slug format from "week-1" to "week1" for the image path
   const imageSlug = slug.replace('-', '')
-  const coverImageUrl = `/blog/${imageSlug}/cover.jpg`
+  const [imgSrc, setImgSrc] = useState(`/blog/${imageSlug}/cover.jpg`)
+
+  const handleImageError = () => {
+    setImgSrc(`/placeholder.svg?height=360&width=640&text=${encodeURIComponent(title)}`)
+  }
 
   return (
     <motion.div
@@ -40,20 +44,19 @@ export function WeeklyBlogCard({ title, description, date, slug, week, imageUrl 
             className="h-full w-full"
           >
             <Image 
-              src={coverImageUrl}
+              src={imgSrc}
               alt={title} 
               fill 
               className="object-cover"
               priority
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              onError={(e) => {
-                const target = e.target as HTMLImageElement
-                target.src = `/placeholder.svg?height=360&width=640&text=${encodeURIComponent(title)}`
-              }}
+              onError={handleImageError}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
           </motion.div>
-          <Badge className="absolute left-4 top-4 bg-primary text-primary-foreground">{week}</Badge>
+          <Badge className="absolute left-4 top-4 bg-primary text-primary-foreground">
+            {week}
+          </Badge>
         </div>
         <CardHeader className="p-4">
           <CardTitle className="line-clamp-1 text-xl">{title}</CardTitle>

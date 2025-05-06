@@ -13,7 +13,7 @@ export default function Home() {
       <header className="sticky top-0 z-40 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container flex h-16 items-center justify-between py-4">
           <Link href="/" className="flex items-center space-x-2">
-            <span className="text-xl font-bold tracking-tight"></span>
+            <span className="text-xl font-bold tracking-tight">nberrr</span>
           </Link>
           <nav className="flex items-center gap-6 text-sm">
             <Link href="/" className="font-medium transition-colors hover:text-primary">

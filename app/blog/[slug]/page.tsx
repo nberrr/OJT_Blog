@@ -22,7 +22,7 @@ const blogPosts = {
       "/blog/week1/gallery/pic4.jpeg",
       "/blog/week1/gallery/pic5.jpeg",
       "/blog/week1/gallery/pic6.jpeg",
-      "/blog/week1/gallery/pic7.jpeg",
+      "/blog/week1/gallery/pic7.jpg",
       "/blog/week1/gallery/pic8.jpg",
       "/blog/week1/gallery/pic9.jpg",
     ],
@@ -33,11 +33,7 @@ const blogPosts = {
       
       <p> Our deployment was delayed due to paperwork issues, making us three weeks late from the original schedule. However, as we officially began Week 1, we made sure to maximize our time and productivity.</p>
       
-      <p> This week, we focused on setting up our workspace—installing PCs, crimping and setting up LAN cables, and organizing our workstations. We actively participated in meetings and were assigned our tasks. The major task, called the "Rock Task," revolves around a system we’ll be working on, while our minor tasks involve other responsibilities. I was assigned to collateral report layout, which aligns with my other skills.
-
-</p>
-      
-
+      <p> This week, we focused on setting up our workspace—installing PCs, crimping and setting up LAN cables, and organizing our workstations. We actively participated in meetings and were assigned our tasks. The major task, called the "Rock Task," revolves around a system we’ll be working on, while our minor tasks involve other responsibilities. I was assigned to collateral report layout, which aligns with my other skills.</p>
       <p>Determined to make the most of our first week, I worked on wireframing, layout design, and even tried creating a mock-up logo for the system. Despite the late start, we ensured a productive week, setting a strong foundation for the coming days.
 </p>
     `,
@@ -47,9 +43,9 @@ const blogPosts = {
     date: "March 3-7, 2025",
     author: "John Nebrej N. Rempis",
     week: "Week 2",
-    src: "/blog/week2/cover.jpg", // This should be cover.jpg to match your file structure
+    src: "/blog/week2/cover.jpg", 
     images: [
-      "/blog/week2/gallery/pic1.jpg", // Missing leading slash
+      "/blog/week2/gallery/pic1.jpg", 
       "/blog/week2/gallery/pic2.jpg",
       "/blog/week2/gallery/pic3.jpg",
       "/blog/week2/gallery/pic4.jpg",
@@ -80,6 +76,7 @@ Throughout the week, we continued learning from our mentors, gaining insights in
     date: "April 29, 2023",
     author: "John Nebrej N. Rempis",
     week: "Week 3",
+    src: "/blog/week3/cover.jpg", // Add missing cover image path
     images: [
       "/placeholder.svg?height=600&width=800&text=Week+3:+Project+Work",
       "/placeholder.svg?height=600&width=800&text=Week+3:+Design+Meeting",

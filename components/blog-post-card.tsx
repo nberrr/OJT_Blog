@@ -18,6 +18,9 @@ interface BlogPostCardProps {
 export function BlogPostCard({ title, description, date, slug }: BlogPostCardProps) {
   const [isHovered, setIsHovered] = useState(false)
 
+  // Convert the slug format from "week-1" to "week1" for the image path
+  const imageSlug = slug.replace('-', '')
+
   return (
     <motion.div
       whileHover={{ y: -5 }}
@@ -47,8 +50,8 @@ export function BlogPostCard({ title, description, date, slug }: BlogPostCardPro
           </motion.div>
         </div>
         <CardHeader className="p-4">
-          <CardTitle className="line-clamp-1 text-xl">{title}</CardTitle>
-          <CardDescription>{date}</CardDescription>
+          <CardTitle className="line-clamp-1 text-xl font-bold">{title}</CardTitle>
+          <CardDescription className="text-sm text-muted-foreground">{date}</CardDescription>
         </CardHeader>
         <CardContent className="p-4 pt-0">
           <p className="line-clamp-2 text-sm text-muted-foreground">{description}</p>

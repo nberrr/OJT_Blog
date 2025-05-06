@@ -25,7 +25,7 @@ export function FeaturedPost() {
       <Card className="overflow-hidden border-primary/20 shadow-lg">
         <div className="relative aspect-video">
           <Image
-            src="/placeholder.svg?height=720&width=1280&text=Featured:+Week+3+Challenge"
+            src="/blog/week1/cover.jpeg?height=720&width=1280&text=Featured:+Week+1"
             alt="Featured post"
             fill
             className="object-cover"
@@ -39,12 +39,12 @@ export function FeaturedPost() {
         </CardHeader>
         <CardContent>
           <p>
-            Week three marked a significant shift in my OJT experience as I faced my first real challenge. The
+            Week one marked a significant shift in my OJT experience as I faced my first real challenge. The
             comfortable routine I had begun to establish was disrupted, pushing me out of my comfort zone.
           </p>
         </CardContent>
         <CardFooter>
-          <Link href="/blog/week-3" passHref className="w-full">
+          <Link href="/blog/week-1" passHref className="w-full">
             <Button className="w-full">Read Full Entry</Button>
           </Link>
         </CardFooter>
