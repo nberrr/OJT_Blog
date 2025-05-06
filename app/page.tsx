@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button"
 import { FeaturedPost } from "@/components/featured-post"
 import { NewsletterModal } from "@/components/newsletter-modal"
 import { WeeklyBlogCard } from "@/components/weekly-blog-card"
+import { blogPosts } from "@/lib/blogPosts"
 
 export default function Home() {
   return (
@@ -67,38 +68,17 @@ export default function Home() {
               </div>
             </div>
             <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 py-12 md:grid-cols-2">
-              <WeeklyBlogCard
-                title="First Steps into the Unknown"
-                description="My first week of OJT was filled with new faces, unfamiliar systems, and unexpected challenges."
-                date="April 15, 2023"
-                slug="week-1"
-                week="Week 1"
-                imageUrl="/placeholder.svg?height=400&width=600&text=Week+1:+First+Steps"
-              />
-              <WeeklyBlogCard
-                title="Finding My Rhythm"
-                description="By week two, I started to establish routines and understand the workflow better."
-                date="April 22, 2023"
-                slug="week-2"
-                week="Week 2"
-                imageUrl="/placeholder.svg?height=400&width=600&text=Week+2:+Finding+Rhythm"
-              />
-              <WeeklyBlogCard
-                title="The First Real Challenge"
-                description="Week three brought my first significant project and the pressure that came with it."
-                date="April 29, 2023"
-                slug="week-3"
-                week="Week 3"
-                imageUrl="/placeholder.svg?height=400&width=600&text=Week+3:+First+Challenge"
-              />
-              <WeeklyBlogCard
-                title="Collaboration and Growth"
-                description="Learning to work effectively with my team members became the focus of my fourth week."
-                date="May 6, 2023"
-                slug="week-4"
-                week="Week 4"
-                imageUrl="/placeholder.svg?height=400&width=600&text=Week+4:+Collaboration"
-              />
+              {Object.entries(blogPosts).map(([slug, post]) => (
+                <WeeklyBlogCard
+                  key={slug}
+                  title={post.title}
+                  description={post.description}
+                  date={post.date}
+                  slug={slug}
+                  week={post.week}
+                  imageUrl={post.src || "/placeholder.svg?height=400&width=600&text=" + encodeURIComponent(post.week + ": " + post.title)}
+                />
+              ))}
             </div>
             <div className="flex justify-center">
               <Link href="/blog" passHref>

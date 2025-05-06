@@ -12,7 +12,7 @@ interface BlogCoverImageProps {
 export function BlogCoverImage({ src, alt, week, title }: BlogCoverImageProps) {
   return (
     <Image
-      src={`/blog/week${week.split(" ")[1]}/cover.jpg`}
+      src={src}
       alt={alt}
       fill
       className="object-cover"

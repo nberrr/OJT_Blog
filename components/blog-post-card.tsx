@@ -13,13 +13,11 @@ interface BlogPostCardProps {
   description: string
   date: string
   slug: string
+  imageUrl: string
 }
 
-export function BlogPostCard({ title, description, date, slug }: BlogPostCardProps) {
+export function BlogPostCard({ title, description, date, slug, imageUrl }: BlogPostCardProps) {
   const [isHovered, setIsHovered] = useState(false)
-
-  // Convert the slug format from "week-1" to "week1" for the image path
-  const imageSlug = slug.replace('-', '')
 
   return (
     <motion.div
@@ -36,7 +34,7 @@ export function BlogPostCard({ title, description, date, slug }: BlogPostCardPro
             className="h-full w-full"
           >
             <Image
-              src={`/blog/${slug}/cover.jpg`}
+              src={imageUrl}
               alt={title}
               fill
               className="object-cover"

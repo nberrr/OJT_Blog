@@ -20,10 +20,7 @@ interface WeeklyBlogCardProps {
 
 export function WeeklyBlogCard({ title, description, date, slug, week, imageUrl }: WeeklyBlogCardProps) {
   const [isHovered, setIsHovered] = useState(false)
-
-  // Convert the slug format from "week-1" to "week1" for the image path
-  const imageSlug = slug.replace('-', '')
-  const [imgSrc, setImgSrc] = useState(`/blog/${imageSlug}/cover.jpg`)
+  const [imgSrc, setImgSrc] = useState(imageUrl)
 
   const handleImageError = () => {
     setImgSrc(`/placeholder.svg?height=360&width=640&text=${encodeURIComponent(title)}`)
