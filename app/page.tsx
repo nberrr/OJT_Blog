@@ -35,7 +35,7 @@ export default function Home() {
             <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
               <div className="flex flex-col justify-center space-y-4">
                 <div className="space-y-2">
-                  <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
+                  <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none bg-gradient-to-r from-teal-500 to-teal-700 bg-clip-text text-transparent">
                     The Art of Productive Laziness
                   </h1>
                   <p className="max-w-[600px] text-muted-foreground md:text-xl">
@@ -44,7 +44,6 @@ export default function Home() {
                   </p>
                 </div>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row">
-                  <NewsletterModal />
                   <Link href="/blog" passHref>
                     <Button variant="outline" className="group">
                       Browse Weekly Entries
@@ -68,7 +67,9 @@ export default function Home() {
               </div>
             </div>
             <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 py-12 md:grid-cols-2">
-              {Object.entries(blogPosts).map(([slug, post]) => (
+              {Object.entries(blogPosts)
+                .slice(0, 4)
+                .map(([slug, post]) => (
                 <WeeklyBlogCard
                   key={slug}
                   title={post.title}
@@ -116,7 +117,7 @@ export default function Home() {
       <footer className="border-t py-6 md:py-0">
         <div className="container flex flex-col items-center justify-between gap-4 md:h-24 md:flex-row">
           <p className="text-center text-sm leading-loose text-muted-foreground md:text-left">
-            © 2023 John Nebrej N. Rempis. All rights reserved.
+            © 2025 John Nebrej N. Rempis. All rights reserved.
           </p>
           <div className="flex items-center gap-4 text-sm">
             <Link href="#" className="font-medium underline underline-offset-4">

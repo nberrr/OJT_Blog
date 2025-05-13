@@ -56,7 +56,7 @@ export function WeeklyBlogCard({ title, description, date, slug, week, imageUrl 
           </Badge>
         </div>
         <CardHeader className="p-4">
-          <CardTitle className="line-clamp-1 text-xl">{title}</CardTitle>
+          <CardTitle className="line-clamp-1 text-xl text-primary">{title}</CardTitle>
           <CardDescription>{date}</CardDescription>
         </CardHeader>
         <CardContent className="p-4 pt-0">
@@ -64,7 +64,7 @@ export function WeeklyBlogCard({ title, description, date, slug, week, imageUrl 
         </CardContent>
         <CardFooter className="p-4">
           <Link href={`/blog/${slug}`} passHref className="w-full">
-            <Button variant="outline" className="w-full">
+            <Button variant="default" className="w-full">
               Read Entry
             </Button>
           </Link>

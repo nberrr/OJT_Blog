@@ -8,19 +8,12 @@ import { Badge } from "@/components/ui/badge"
 import { BlogCoverImage } from "@/components/blog-cover-image"
 import { blogPosts } from "@/lib/blogPosts"
 
-export default function BlogPost({ params }: { params: { slug: string } }) {
-  const { slug } = params
+export default async function BlogPost({ params }: { params: { slug: string } }) {
+  const { slug } = await params
   const post = blogPosts[slug as keyof typeof blogPosts]
 
   if (!post) {
-    return (
-      <div className="flex min-h-screen flex-col items-center justify-center">
-        <h1 className="text-2xl font-bold">Post not found</h1>
-        <Link href="/blog" passHref>
-          <Button variant="link">Back to Blog</Button>
-        </Link>
-      </div>
-    )
+    return <div>Post not found</div>
   }
 
   return (

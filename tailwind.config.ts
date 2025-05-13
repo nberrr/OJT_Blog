@@ -27,12 +27,12 @@ const config = {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "hsl(142, 76%, 36%)", // Green color for the productive theme
-          foreground: "hsl(0, 0%, 100%)",
+          DEFAULT: "#14b8a6", // Teal 500
+          foreground: "#ffffff",
         },
         secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
+          DEFAULT: "#5eead4", // Teal 300
+          foreground: "#134e4a", // Teal 900
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
@@ -43,8 +43,8 @@ const config = {
           foreground: "hsl(var(--muted-foreground))",
         },
         accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
+          DEFAULT: "#2dd4bf", // Teal 400
+          foreground: "#134e4a", // Teal 900
         },
         popover: {
           DEFAULT: "hsl(var(--popover))",

@@ -48,7 +48,7 @@ export function BlogPostCard({ title, description, date, slug, imageUrl }: BlogP
           </motion.div>
         </div>
         <CardHeader className="p-4">
-          <CardTitle className="line-clamp-1 text-xl font-bold">{title}</CardTitle>
+          <CardTitle className="line-clamp-1 text-xl text-primary font-bold">{title}</CardTitle>
           <CardDescription className="text-sm text-muted-foreground">{date}</CardDescription>
         </CardHeader>
         <CardContent className="p-4 pt-0">
@@ -56,8 +56,8 @@ export function BlogPostCard({ title, description, date, slug, imageUrl }: BlogP
         </CardContent>
         <CardFooter className="p-4">
           <Link href={`/blog/${slug}`} passHref className="w-full">
-            <Button variant="outline" className="w-full">
-              Read Article
+            <Button variant="default" className="w-full">
+              Read Entry
             </Button>
           </Link>
         </CardFooter>

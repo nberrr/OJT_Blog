@@ -8,9 +8,15 @@ import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import { blogPosts } from "@/lib/blogPosts"
 
 export function FeaturedPost() {
   const [isVisible, setIsVisible] = useState(false)
+  const latestPost = Object.entries(blogPosts).sort((a, b) => {
+    const weekA = parseInt(a[1].week.split(" ")[1])
+    const weekB = parseInt(b[1].week.split(" ")[1])
+    return weekB - weekA
+  })[0][1]
 
   useEffect(() => {
     setIsVisible(true)
@@ -25,26 +31,26 @@ export function FeaturedPost() {
       <Card className="overflow-hidden border-primary/20 shadow-lg">
         <div className="relative aspect-video">
           <Image
-            src="/blog/week1/cover.jpeg?height=720&width=1280&text=Featured:+Week+1"
+            src={latestPost.src || `/placeholder.svg?height=720&width=1280&text=Featured:+${latestPost.week}`}
             alt="Featured post"
             fill
             className="object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-          <Badge className="absolute left-4 top-4 bg-primary text-primary-foreground">Week 1</Badge>
+          <div className="absolute left-4 top-4 flex gap-2">
+            <Badge className="bg-primary text-primary-foreground">{latestPost.week}</Badge>
+            <Badge variant="secondary">Latest</Badge>
+          </div>
         </div>
         <CardHeader>
-          <CardTitle className="text-2xl">Stepping into Workplace</CardTitle>
-          <CardDescription>February 24-28 ,2025</CardDescription>
+          <CardTitle className="text-2xl">{latestPost.title}</CardTitle>
+          <CardDescription>{latestPost.date}</CardDescription>
         </CardHeader>
         <CardContent>
-          <p>
-            Week one marked a significant shift in my OJT experience as I faced my first real challenge. The
-            comfortable routine I had begun to establish was disrupted, pushing me out of my comfort zone.
-          </p>
+          <p>{latestPost.description}</p>
         </CardContent>
         <CardFooter>
-          <Link href="/blog/week-1" passHref className="w-full">
+          <Link href={`/blog/${Object.keys(blogPosts).find(key => blogPosts[key] === latestPost)}`} passHref className="w-full">
             <Button className="w-full">Read Full Entry</Button>
           </Link>
         </CardFooter>
